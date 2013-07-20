@@ -1,0 +1,9 @@
+<html>
+<body>
+
+<h1>{{ article.title }}</h1>
+<p>{{ article.body }}</p>
+<span><a href="/articles/likes/{{ article.id }}" >{{ article.likes }} </a> </span>
+
+</body>
+</html>

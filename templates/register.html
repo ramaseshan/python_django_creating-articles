@@ -1,0 +1,11 @@
+{% load static %}
+
+<head >
+<link rel="stylesheet" type="text/css" href="{%static "style/style.css"  %}"
+</head>
+<h2>register</h2>
+
+<form action='/accounts/register/' method="post">{% csrf_token %}
+{{ form.as_p}}<br>
+<input type="submit" value="register" />
+</form>

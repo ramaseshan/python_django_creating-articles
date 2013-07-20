@@ -1,0 +1,26 @@
+
+{% load static %}
+<html>
+<head>
+<link type="text/css" rel="stylesheet" href="{% static "style/style.css" %}"
+</head>
+<body>
+<h1>Articles</h1>
+<h3 id="admin"><a href="/admin/">
+{% block admin %}admin
+{% endblock %}</a></h3>
+<h3><a href="/accounts/register/">registration form</a></h3>
+<h3><a href="">login form</a></h3>
+<h3><a href="/articles/create/"> Create an Article</a></h3>
+{% for article in articles %}
+<div>
+<h2><a href="/articles/all/{{ article.id }}/">{{ article.id }} : {{ article.title }}</a></h2>
+
+<span>{{ article.likes }} </span>
+<h2> </h2>
+<p>{{ article.body }}</p>
+</div>
+{% endfor %}
+</body>
+</html>
+
